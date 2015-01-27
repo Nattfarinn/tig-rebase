@@ -12,7 +12,7 @@ function usage()
 
 [ "$#" -lt 1 ] && usage
 
-replace="sed -i ''"
+replace="sed -i"
 
 case $action in
     fixup|ascend|descend|reword|abort)
