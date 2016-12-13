@@ -20,7 +20,7 @@ case $action in
             if [ -z $commit ]; then
                 usage
             else
-                current=${commit:0:7}
+                current=$(git log --pretty=format:%h "$commit" -1)
                 parent=$(git log --pretty=format:%h ${current}~1 -1)
                 child=$(git log --pretty=format:%h --reverse --ancestry-path ${current}..HEAD | head -n 1)
             fi
