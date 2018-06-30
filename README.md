@@ -26,3 +26,8 @@ bind diff <Ctrl-r> !tig-rebase.sh reword %(commit)
 bind main <Ctrl-x> !tig-rebase.sh abort
 bind diff <Ctrl-x> !tig-rebase.sh abort
 ```
+# Create fixup commit from current staged changes (no rebase happens
+# here, this just creates a commit to fix the selected commit)
+bind main <Ctrl-F> !git commit --fixup %(commit)
+bind diff <Ctrl-F> !git commit --fixup %(commit)
+
